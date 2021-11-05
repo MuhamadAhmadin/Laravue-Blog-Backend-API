@@ -79,7 +79,7 @@ class PostController extends Controller
             ], 400);
         }
 
-        $post = Post::findOrFail($id);
+        $post = Post::find($id);
 
         if ($post) {
             $post->update([
@@ -102,7 +102,7 @@ class PostController extends Controller
 
     public function destroy($id)
     {
-        $post = Post::findOrFail($id);
+        $post = Post::find($id);
 
         if ($post) {
             $post->delete();
